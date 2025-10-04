@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import { WeekContent } from '@/components/WeekContent';
 import { PracticeExercise } from '@/components/PracticeExercise';
+import { KellyCalculator } from '@/components/KellyCalculator';
 
 const Index = () => {
   const [currentWeek, setCurrentWeek] = useState(1);
@@ -142,20 +143,26 @@ const Index = () => {
             ))}
           </Tabs>
 
-          <Card className="mt-8 border-primary/20 bg-primary/5">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Icon name="Dumbbell" className="text-primary" />
-                Практические упражнения
-              </CardTitle>
-              <CardDescription>
-                Тренируй аналитическое мышление на реальных примерах
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <PracticeExercise />
-            </CardContent>
-          </Card>
+          <div className="grid md:grid-cols-2 gap-8 mt-8">
+            <Card className="border-primary/20 bg-primary/5">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Icon name="Dumbbell" className="text-primary" />
+                  Практические упражнения
+                </CardTitle>
+                <CardDescription>
+                  Тренируй аналитическое мышление на реальных примерах
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <PracticeExercise />
+              </CardContent>
+            </Card>
+
+            <div>
+              <KellyCalculator />
+            </div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6 mt-8">
             <Card>
